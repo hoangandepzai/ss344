@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm vào Danh Sách</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        input {
+            margin-bottom: 10px;
+            padding: 8px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<input type="text" id="inputValue" placeholder="Nhập giá trị">
+<button id="addButton">Thêm vào Danh Sách</button>
+
+<ul id="resultList"></ul>
+
+<script>
+    document.getElementById('addButton').addEventListener('click', function() {
+        var inputValue = document.getElementById('inputValue').value;
+
+        if (inputValue.trim() !== '') {
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(inputValue));
+
+            document.getElementById('resultList').appendChild(li);
+
+            document.getElementById('inputValue').value = '';
+        }
+    });
+</script>
+
+</body>
+</html>

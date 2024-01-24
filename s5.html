@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển Thị Tên</title>
+</head>
+<body>
+
+<script>
+    var names = ["Nguyễn Văn A", "Vũ Thị B", "Nguyễn Minh C"];
+
+    var ul = document.createElement("ul");
+
+    for (var i = 0; i < names.length; i++) {
+        var li = document.createElement("li");
+        li.appendChild(document.createTextNode(names[i]));
+        ul.appendChild(li);
+    }
+
+    document.body.appendChild(ul);
+</script>
+
+</body>
+</html>
